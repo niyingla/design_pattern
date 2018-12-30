@@ -21,5 +21,7 @@ public interface ICourse {
      * @return
      */
     double getPrice();
+
+
 }
 

@@ -1,6 +1,7 @@
 package com.pikaqiu.xzq.principle.openclose;
 
 import com.pikaqiu.xzq.principle.openclose.impl.JavaCourse;
+import com.pikaqiu.xzq.principle.openclose.impl.JavaDiscountCourse;
 
 /**
  * @program: pikaqiu
@@ -11,9 +12,9 @@ import com.pikaqiu.xzq.principle.openclose.impl.JavaCourse;
 public class Test {
 
     public static void main(String[] args) {
-        JavaCourse javaCourse = new JavaCourse(11, "java课程", 42d);
-        System.out.println(javaCourse.getName());
-        System.out.println("课程Id：" + javaCourse.getId() + "       课程名：" + javaCourse.getName() + "      课程价格：" + javaCourse.getPrice());
+        ICourse course = new JavaDiscountCourse(11, "java课程", 42d);
+        JavaDiscountCourse javaCourse = (JavaDiscountCourse)course;
+        System.out.println("课程Id：" + javaCourse.getId() + "       课程名：" + javaCourse.getName() + "      课程价格：" + javaCourse.getOrigPrice()+ "      课程折后价格：" + javaCourse.getPrice());
     }
 
 
