@@ -1,6 +1,7 @@
 package com.pikaqiu.xzq.principle.openclose.impl;
 
 import com.pikaqiu.xzq.principle.openclose.ICourse;
+import lombok.Data;
 
 /**
  * @program: pikaqiu
@@ -8,6 +9,7 @@ import com.pikaqiu.xzq.principle.openclose.ICourse;
  * @author: xiaoye
  * @create: 2018-12-30 20:22
  **/
+@Data
 public class JavaCourse implements ICourse {
     private Integer id;
 
@@ -19,20 +21,5 @@ public class JavaCourse implements ICourse {
         this.id = id;
         this.name = name;
         this.price = price;
-    }
-
-    @Override
-    public Integer getId() {
-        return this.id;
-    }
-
-    @Override
-    public String getName() {
-        return this.name;
-    }
-
-    @Override
-    public double getPrice() {
-        return this.price;
     }
 }
